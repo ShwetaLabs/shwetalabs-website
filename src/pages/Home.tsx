@@ -17,12 +17,12 @@ import {
 import { contactLink } from '../data/navigation';
 import {
   AwardTile,
-  BlogTile,
   Feature,
   PodcastEpisodeTile,
   Product,
   Testimony,
 } from '../components/misc';
+import { BlogTile } from '../components/blogTile/blogTile';
 import { isDesktop } from '../utils';
 import Marquee from 'react-fast-marquee';
 
@@ -300,7 +300,7 @@ function BlogsAdvert(): JSX.Element {
       </p>
       <div className='row'>
         {blogsAdvertData.blogs.map(blog => {
-          return <BlogTile blog={blog} key={blog.title} />;
+          return <BlogTile blog={blog} showPreview={false} key={blog.title} />;
         })}
       </div>
     </div>
@@ -311,7 +311,7 @@ function BlogsAdvert(): JSX.Element {
       </p>
       <div className='col'>
         {blogsAdvertData.blogs.map(blog => {
-          return <BlogTile blog={blog} key={blog.title} />;
+          return <BlogTile blog={blog} showPreview={false} key={blog.title} />;
         })}
       </div>
     </div>

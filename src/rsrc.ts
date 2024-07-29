@@ -72,6 +72,7 @@ import harryKerluke from './assets/people/harryKerluke.png';
 import blog1 from './assets/blogs/blog1.png';
 import blog2 from './assets/blogs/blog2.png';
 import blog3 from './assets/blogs/blog3.png';
+import featuredBlog from './assets/blogs/featuredBlog.png';
 
 import playButton from './assets/icons/playButton.svg';
 import List from './assets/icons/List.svg';
@@ -171,4 +172,5 @@ export const blogImages = {
   blog1,
   blog2,
   blog3,
+  featuredBlog,
 };

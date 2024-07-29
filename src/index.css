@@ -33,7 +33,7 @@
   font-weight: 600;
 }
 
-@media(max-width:800px) {
+@media (max-width: 800px) {
   :root {
     font-size: 4vw;
   }
@@ -74,7 +74,7 @@
   /*figma: 96*/
 }
 
-@media(min-width:800px) {
+@media (min-width: 800px) {
   :root {
     font-size: 1.275vw;
   }
@@ -138,14 +138,14 @@ a {
   color: white;
   /* color: var(--accent); */
 }
-div.textonly>*>p{
+div.textonly > * > p {
   padding-top: 0px;
 }
-div.textonly>*>div{
+div.textonly > * > div {
   text-indent: 0;
   margin-block: 5px;
 }
-li{
+li {
   text-indent: 0;
   font-weight: 700;
 }
@@ -155,7 +155,7 @@ div.main {
   margin-inline: 0px;
 }
 
-div.home>* {
+div.home > * {
   margin-inline: auto;
 }
 
@@ -166,10 +166,10 @@ a.headerButton {
   padding-inline: 1.2vw;
   letter-spacing: 50%;
 }
-a.hoverColor:hover{
+a.hoverColor:hover {
   color: var(--primary-light);
 }
-a.hoverUnderline:hover{
+a.hoverUnderline:hover {
   border-bottom: solid 3px var(--primary);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -187,23 +187,25 @@ div.inline-fade {
 }
 
 div.inline-fade::before {
-  content: "";
+  content: '';
   display: block;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2;/*huge to ensure overlay over most elements*/
-  background-image: linear-gradient(to right,
-      rgba(0, 0, 0, 1),
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 1));
+  z-index: 2; /*huge to ensure overlay over most elements*/
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1)
+  );
 }
 
 p.shady-70 {
@@ -243,7 +245,6 @@ p.shady-70 {
   padding: 0;
   margin: 0;
 }
-
 
 a.footerLink {
   display: block;
@@ -289,8 +290,13 @@ img.profile {
 }
 
 div.blogtile {
-  height: 250px;
   overflow: hidden;
+}
+
+div.blogtile img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
 div.episodetile {
@@ -375,10 +381,12 @@ a.button3 {
 }
 
 .gradient-shade {
-  background-image: linear-gradient(to top,
-      rgba(0, 0, 0, 1),
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0));
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0)
+  );
 }
 
 .left {
@@ -419,7 +427,6 @@ a.caret-right::after {
 TODO: employ only fs classes to set font sizes across elements.
 add media query for all fs-clases' font-size values.
 */
-
 
 .pointable {
   cursor: pointer;

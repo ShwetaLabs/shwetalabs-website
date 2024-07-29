@@ -37,8 +37,7 @@ export default function Values({ values }: valuesProp): JSX.Element {
       <div style={{ padding: '0px 215px', marginBottom: '48px' }}>
         {/* <div style={{ fontSize: "20px" }} > {values.superTitle} </div> */}
         <div style={{ fontSize: '100px', marginBottom: '24px' }}>
-          {' '}
-          {values.title}{' '}
+          {values.title}
         </div>
         {/* <div style={{ opacity: '0.6' }}> {values.para} </div> */}
       </div>

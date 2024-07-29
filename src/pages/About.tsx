@@ -61,7 +61,7 @@ export function About(): JSX.Element {
       }}
     >
       <TitleInfo titleInfo={aboutData.titleInfo} />
-      <div style={{}}>
+      <div style={{ border: '2px solid red' }}>
         {aboutData.visions.map(visionCard => {
           return (
             <div

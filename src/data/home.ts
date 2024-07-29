@@ -118,6 +118,8 @@ export interface blogSpec {
   date: string;
   length: string;
   title: string;
+  data: string;
+  buttonText: string;
   url: string;
 }
 export const blogsAdvertData = {
@@ -131,6 +133,8 @@ export const blogsAdvertData = {
       date: '12 March, 2024',
       title:
         'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. ',
+      buttonText: 'Read Article',
+      data: '',
       url: '/contact',
     },
     {
@@ -140,6 +144,8 @@ export const blogsAdvertData = {
       date: '12 March, 2024',
       title:
         'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. ',
+      buttonText: 'Read Article',
+      data: '',
       url: '/contact',
     },
     {
@@ -149,6 +155,8 @@ export const blogsAdvertData = {
       date: '12 March, 2024',
       title:
         'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. ',
+      buttonText: 'Read Article',
+      data: '',
       url: '/contact',
     },
   ],
