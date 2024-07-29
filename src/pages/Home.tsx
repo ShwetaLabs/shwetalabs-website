@@ -77,7 +77,10 @@ function BriefAdvert(): JSX.Element {
         }}
       >
         <div>
-          <p className='shady-70' style={{ width: '30vw' }}>
+          <p
+            className='shady-70'
+            style={{ width: '30vw', textAlign: 'justify' }}
+          >
             {advertData.descriptionBesideLogo}
           </p>
         </div>

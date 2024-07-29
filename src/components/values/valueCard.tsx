@@ -14,31 +14,35 @@ export default function ValueCard({ valueCard, onLeft }: valueCardProp) {
         style={{
           height: '100%',
           display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
         }}
       >
-        <div style={{ width: '37%', padding: '50px' }}>
+        <div
+          style={{
+            margin: 'auto',
+            alignItems: 'center',
+            minWidth: '25%',
+            maxWidth: '25%',
+            padding: '0px 10%',
+          }}
+        >
           <img
-            style={{ objectFit: 'cover' }}
+            style={{ objectFit: 'scale-down', width: '100%' }}
             src={valueCard.image}
             alt={valueCard.title}
           />
         </div>
-        <div style={{ width: '63%', marginTop: '16px', marginRight: '40px' }}>
-          <div style={{ marginBottom: '16px' }}>
-            <span className='fs-large' style={{ marginBottom: '16px' }}>
-              {' '}
-              {valueCard.title}{' '}
+        <div style={{ marginTop: '16px', marginRight: '40px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '16px' }}>
+            <span className='fw-bold' style={{ marginBottom: '16px' }}>
+              {valueCard.title}
             </span>
           </div>
-          <div
+          <p
             className='fs-smaller'
-            style={{ textAlign: 'left', opacity: '0.6' }}
+            style={{ lineHeight: '1.4', textAlign: 'left', opacity: '0.6' }}
           >
-            {' '}
-            {valueCard.para}{' '}
-          </div>
+            {valueCard.para}
+          </p>
         </div>
       </div>
     </div>
@@ -47,23 +51,21 @@ export default function ValueCard({ valueCard, onLeft }: valueCardProp) {
       className='col bg-accent'
       style={{
         height: '100%',
+        padding: '2% 10% 0% 10%',
         alignItems: 'center',
-        justifyContent: 'center',
-        marginTop: 20,
-        padding: 20,
       }}
     >
-      <div style={{}}>
+      <div>
         <img
           style={{ objectFit: 'cover' }}
           src={valueCard.image}
           alt={valueCard.title}
         />
       </div>
-      <p style={{ marginBlock: 20 }} className='fw-bold fs-large stripped'>
+      <p style={{ marginBlock: 20 }} className='fs-larger stripped'>
         {valueCard.title}
       </p>
-      <p className='' style={{ textAlign: 'center', opacity: '0.6' }}>
+      <p className='fs-small' style={{ textAlign: 'center', opacity: '0.6' }}>
         {valueCard.para}
       </p>
     </div>

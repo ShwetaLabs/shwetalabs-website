@@ -57,7 +57,13 @@ function SubcapabilityRow({
         }}
       >
         <span className='fw-bold'> {subCapability.title} </span>
-        <p className='fs-smaller shady-70 stripped'> {subCapability.paras} </p>
+        <p
+          className='fs-smaller shady-70 stripped'
+          style={{ lineHeight: '1.4' }}
+        >
+          {' '}
+          {subCapability.paras}{' '}
+        </p>
       </div>
     </div>
   ) : (
@@ -104,7 +110,11 @@ export default function CapabilityRow({
     return (
       <div
         className={imageOnLeft ? 'row' : 'rrow'}
-        style={{ display: 'flex', backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
+        style={{
+          display: 'flex',
+          backgroundColor: 'rgba(255, 255, 255, 0.1)',
+          marginBottom: '50px',
+        }}
       >
         <div
           style={{

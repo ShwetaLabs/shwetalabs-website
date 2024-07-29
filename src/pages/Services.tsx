@@ -4,8 +4,8 @@ import { isDesktop } from '../utils';
 
 export function Services(): JSX.Element {
   return isDesktop() ? (
-    <div style={{ marginLeft: '160px', marginRight: '160px' }}>
-      <div style={{ marginLeft: '192px', marginRight: '192px' }}>
+    <div style={{ marginLeft: '12%', marginRight: '12%' }}>
+      <div style={{ marginLeft: '90px', marginRight: '90px' }}>
         <p className='title2 fs-x-large'>{servicesData.title}</p>
         <p className='shady-70 centered'>{servicesData.subtitle}</p>
       </div>

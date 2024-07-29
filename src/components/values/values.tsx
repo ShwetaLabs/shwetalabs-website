@@ -12,7 +12,7 @@ export default function Values({ values }: valuesProp): JSX.Element {
     var inRow: JSX.Element[] = [];
     for (var i = 0; i < values.length; i++) {
       inRow.push(
-        <div style={{ margin: '16px', width: '50%' }}>
+        <div style={{ margin: '16px', maxWidth: '50%', minWidth: '50%' }}>
           <ValueCard valueCard={values[i]} onLeft={true} />
         </div>,
       );
@@ -25,32 +25,41 @@ export default function Values({ values }: valuesProp): JSX.Element {
         inRow = [];
       }
     }
-    rows.push(
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        {inRow.concat()}
-      </div>,
-    );
+    if (inRow.length > 0) {
+      rows.push(
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          {inRow.concat()}
+        </div>,
+      );
+    }
     return rows;
   }
   return isDesktop() ? (
     <div>
-      <div style={{ padding: '0px 215px', marginBottom: '48px' }}>
-        {/* <div style={{ fontSize: "20px" }} > {values.superTitle} </div> */}
-        <div style={{ fontSize: '100px', marginBottom: '24px' }}>
+      <div style={{ padding: '0px 17%', marginBottom: '48px' }}>
+        <div
+          className='title fs-xx-large'
+          style={{ marginBottom: '24px', textAlign: 'center' }}
+        >
           {values.title}
         </div>
-        {/* <div style={{ opacity: '0.6' }}> {values.para} </div> */}
       </div>
       <div> {createRows(values.cards)} </div>
     </div>
   ) : (
     <div>
       <div style={{}}>
-        <p className='fs-x-large title2'>{values.title}</p>
+        <p className='fs-x-large title' style={{ textAlign: 'center' }}>
+          {values.title}
+        </p>
       </div>
       <div>
         {values.cards.map(card => {
-          return <ValueCard valueCard={card} onLeft={false} key={card.title} />;
+          return (
+            <div style={{ marginTop: '32px' }}>
+              <ValueCard valueCard={card} onLeft={false} key={card.title} />{' '}
+            </div>
+          );
         })}
       </div>
     </div>

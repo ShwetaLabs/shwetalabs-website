@@ -27,7 +27,6 @@ export function Footer({ getDisplay }: any): JSX.Element {
           key={footerData.logo}
           style={{ justifyContent: 'space-around' }}
         >
-          {/* get better res. logo */}
           <img src={footerData.logo} />
         </div>
         <div
@@ -191,7 +190,7 @@ export function SocialLinks() {
     <div className='row' style={{ marginTop: '1.96vw' }}>
       {footerData.socialLinks.map(link => {
         return (
-          <span style={{ marginInline: '12.5px' }}>
+          <span style={{ marginRight: '25px' }}>
             <LinkBox
               link={link}
               aClassName='button fs-large'

@@ -11,14 +11,18 @@ export default function SleuthHead({ sleuthHead }: SleuthHeadProp) {
     <div className='col' style={{ alignItems: 'center' }}>
       <div
         style={{
-          paddingLeft: '96px',
-          paddingRight: '96px',
+          paddingLeft: '9%',
+          paddingRight: '9%',
           marginBottom: '32px',
         }}
       >
-        <img src={sleuthHead.img} alt='Sleuth' />
+        <img
+          style={{ objectFit: 'scale-down' }}
+          src={sleuthHead.img}
+          alt='Sleuth'
+        />
       </div>
-      <div style={{ paddingLeft: '96px', paddingRight: '96px' }}>
+      <div style={{ paddingLeft: '9%', paddingRight: '9%' }}>
         <div style={{ paddingBottom: '32px' }}>
           <p className='shady-70 centered'>{sleuthHead.paras}</p>
         </div>
@@ -28,16 +32,6 @@ export default function SleuthHead({ sleuthHead }: SleuthHeadProp) {
             aClassName='button4 caret-right'
           />
         </span> */}
-      </div>
-      <div
-        style={{
-          marginTop: '12.1vw',
-          paddingLeft: '96px',
-          paddingRight: '96px',
-          marginBottom: '32px',
-        }}
-      >
-        <div className='title2 fs-larger'>{sleuthHead.title}</div>
       </div>
     </div>
   ) : (
@@ -63,14 +57,6 @@ export default function SleuthHead({ sleuthHead }: SleuthHeadProp) {
             aClassName='button4 caret-right'
           />
         </span> */}
-      </div>
-      <div
-        style={{
-          marginTop: '12.1vw',
-          marginBottom: '32px',
-        }}
-      >
-        <div className='title2 fs-x-large'>{sleuthHead.title}</div>
       </div>
     </div>
   );

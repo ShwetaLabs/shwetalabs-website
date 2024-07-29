@@ -158,7 +158,7 @@ function Field({
       className='col'
       style={{ alignItems: 'stretch', marginInlineEnd: '16px', flexGrow: 1 }}
     >
-      <p className='field title fs-small'>{title}</p>
+      <p className='field title '>{title}</p>
       {height && height > 0 ? (
         <textarea
           className='field input'

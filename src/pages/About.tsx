@@ -11,7 +11,7 @@ export function About(): JSX.Element {
     var inRow: JSX.Element[] = [];
     for (var i = 0; i < values.length; i++) {
       inRow.push(
-        <div style={{ width: 'calc(50% - 16px)' }}>
+        <div style={{ width: '49%' }}>
           <ValueCard valueCard={values[i]} onLeft={false} />
         </div>,
       );
@@ -30,38 +30,40 @@ export function About(): JSX.Element {
         inRow = [];
       }
     }
-    rows.push(
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        {inRow.concat()}
-      </div>,
-    );
+    if (inRow.length > 0) {
+      rows.push(
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          {inRow.concat()}
+        </div>,
+      );
+    }
     return rows;
   }
 
   return isDesktop() ? (
     <div
       style={{
-        padding: '160px',
-        paddingTop: '80px',
+        padding: '0px 12% 0px 12%',
         display: 'flex',
         flexDirection: 'column',
-        gap: '160px',
+        gap: '80px',
       }}
     >
       <TitleInfo titleInfo={aboutData.titleInfo} />
-      <div style={{ height: '467px' }}>{createRows(aboutData.visions)}</div>
+      <div style={{}}>{createRows(aboutData.visions)}</div>
       <Values values={aboutData.values} />
-      <Squad squad={aboutData.squad} />
+      {/*<Squad squad={aboutData.squad} /> */}
     </div>
   ) : (
     <div
       className='col'
       style={{
         gap: '160px',
+        padding: '0px 20px 0px 20px',
       }}
     >
       <TitleInfo titleInfo={aboutData.titleInfo} />
-      <div style={{ border: '2px solid red' }}>
+      <div style={{}}>
         {aboutData.visions.map(visionCard => {
           return (
             <div
@@ -78,7 +80,7 @@ export function About(): JSX.Element {
         })}
       </div>
       <Values values={aboutData.values} />
-      <Squad squad={aboutData.squad} />
+      {/*<Squad squad={aboutData.squad} /> */}
     </div>
   );
 }
