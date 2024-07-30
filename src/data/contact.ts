@@ -26,7 +26,7 @@ export const contactData = {
     },
     message: {
       title: 'Your message',
-      placeholder: 'Type your message here.',
+      placeholder: 'Type your message here...',
     },
   },
 };
