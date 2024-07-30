@@ -51,7 +51,7 @@ export default function ValueCard({ valueCard, onLeft }: valueCardProp) {
       className='col bg-accent'
       style={{
         height: '100%',
-        padding: '2% 10% 0% 10%',
+        padding: '2% 2% 0% 2%',
         alignItems: 'center',
       }}
     >
@@ -62,10 +62,10 @@ export default function ValueCard({ valueCard, onLeft }: valueCardProp) {
           alt={valueCard.title}
         />
       </div>
-      <p style={{ marginBlock: 20 }} className='fs-larger stripped'>
+      <p style={{ marginBlock: 10 }} className='fs-larger stripped'>
         {valueCard.title}
       </p>
-      <p className='fs-small' style={{ textAlign: 'center', opacity: '0.6' }}>
+      <p className='fs-small' style={{ lineHeight:"1.4", whiteSpace:'pre-line', textAlign: 'center', opacity: '0.6' }}>
         {valueCard.para}
       </p>
     </div>

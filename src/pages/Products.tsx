@@ -40,7 +40,7 @@ export function Products(): JSX.Element {
           marginBottom: '32px',
         }}
       >
-        <div className='title2 fs-x-large'>{productData.title}</div>
+        <div className='title fs-larger'>{productData.title}</div>
       </div>
       <div>
         {productData.capabilities.capababilites.map((it, index) => (

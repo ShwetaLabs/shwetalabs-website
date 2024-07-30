@@ -12,7 +12,7 @@ export default function Values({ values }: valuesProp): JSX.Element {
     var inRow: JSX.Element[] = [];
     for (var i = 0; i < values.length; i++) {
       inRow.push(
-        <div style={{ margin: '16px', maxWidth: '50%', minWidth: '50%' }}>
+        <div style={{ margin: '1%', maxWidth: '48%', minWidth: '48%' }}>
           <ValueCard valueCard={values[i]} onLeft={true} />
         </div>,
       );
@@ -38,7 +38,7 @@ export default function Values({ values }: valuesProp): JSX.Element {
     <div>
       <div style={{ padding: '0px 17%', marginBottom: '48px' }}>
         <div
-          className='title fs-xx-large'
+          className='title fs-larger'
           style={{ marginBottom: '24px', textAlign: 'center' }}
         >
           {values.title}
