@@ -1,5 +1,6 @@
 import { BlogTile } from '../components/blogTile/blogTile';
 import { blogData } from '../data/blog';
+import { isDesktop } from '../utils';
 
 export function Blog(): JSX.Element {
   return (

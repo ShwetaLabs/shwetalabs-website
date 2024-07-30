@@ -6,8 +6,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### `npm run deploy`
 
-1. Keep the CNAME file on each branch that you may run this script from. Take it from `hardik`.
-2. After running the script, go to [Github Pages Settings](https://github.com/ShwetaLabs/shwetalabs-website/settings/pages) and add `shwetalabs.com` as a custom domain.
+1. Sync changes using the Publishing changes section below.
+2. Run `npm run deploy`.
 
 In the project directory, you can run:
 
@@ -49,3 +49,12 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Pushing changes
+
+1. Save all files. Ctrl+S after clicking inside the file.
+2. Open the terminal using Ctrl + \` and run `git add -A`
+3. Open the source control pane by clicking on the third button on the leftmost menu.
+4. Enter a message, click "Commit."
+5. Click on "Sync Changes."
+   Follow

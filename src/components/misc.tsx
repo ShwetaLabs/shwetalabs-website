@@ -24,14 +24,16 @@ export function Feature({ feature, reverse }: IFeatureProps): JSX.Element {
       style={{ alignItems: 'center', margin: 25, marginInline: 'auto' }}
     >
       <div
+        className='row'
         style={{
           alignItems: 'center',
           justifyContent: 'center',
           marginInline: 16,
           flexGrow: 1,
+          width: '25%',
         }}
       >
-        <img src={feature.image} style={{ width: '60%' }} />
+        <img src={feature.image} style={{ maxWidth: '40%' }} />
       </div>
       {
         <FeatureTextData
@@ -148,7 +150,7 @@ export function Product({ product }: IProductProps): JSX.Element {
         className='row'
         style={{ flexGrow: 1, alignItems: 'center', justifyContent: 'center' }}
       >
-        <img style={{ width: '90%' }} src={product.image} />
+        <img style={{ width: '70%' }} src={product.image} />
       </div>
       {/* todo: single line between image and textdata */}
       <div
@@ -400,8 +402,8 @@ export function PodcastEpisodeTile({
 export function ComingSoon() {
   return (
     <div
-      className='title fs-x-large bg-accent'
-      style={{ padding: '2vw', borderRadius: '5px' }}
+      className='title fs-larger'
+      style={{ margin: '2vw', borderRadius: '5px' }}
     >
       {comingSoonData.text}
     </div>

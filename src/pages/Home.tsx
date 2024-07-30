@@ -1,20 +1,4 @@
-import { features } from 'process';
-import { LinkBox } from '../components/linkBox/LinkBox';
-import {
-  advertData,
-  awardsData,
-  blogsAdvertData,
-  caseStudiesData,
-  featureSpec,
-  ourProductsData,
-  podcastAdvertData,
-  strongholdsData,
-  testimonySpec,
-  trustedPartnersData,
-  userSpec,
-  whatWeHaveData,
-} from '../data/home';
-import { contactLink } from '../data/navigation';
+import Marquee from 'react-fast-marquee';
 import {
   AwardTile,
   Feature,
@@ -22,9 +6,22 @@ import {
   Product,
   Testimony,
 } from '../components/misc';
+<<<<<<< HEAD
 import { BlogTile } from '../components/blogTile/blogTile';
+=======
+import {
+  advertData,
+  awardsData,
+  blogsAdvertData,
+  caseStudiesData,
+  ourProductsData,
+  podcastAdvertData,
+  strongholdsData,
+  trustedPartnersData,
+  whatWeHaveData,
+} from '../data/home';
+>>>>>>> hardik
 import { isDesktop } from '../utils';
-import Marquee from 'react-fast-marquee';
 
 export const Home: ({}) => JSX.Element = ({}) => {
   return (
@@ -32,17 +29,22 @@ export const Home: ({}) => JSX.Element = ({}) => {
       className='col home'
       style={
         isDesktop()
-          ? { alignItems: 'stretch', width: '78%', marginInline: 'auto' }
-          : {}
+          ? {
+              alignItems: 'stretch',
+              width: '78%',
+              marginInline: 'auto',
+              rowGap: 160,
+            }
+          : { rowGap: 120 }
       }
     >
       <BriefAdvert />
-      <CaseStudies />
-      <TrustedPartners />
       <WhatWeHave />
       <OurProducts />
+      {/* <CaseStudies /> */}
+      <TrustedPartners />
       {/* <Awards /> */}
-      <PodcastAdvert />
+      {/* <PodcastAdvert /> */}
       <BlogsAdvert />
       <Strongholds />
     </div>
@@ -55,9 +57,11 @@ function BriefAdvert(): JSX.Element {
       className='col'
       style={{ alignItems: 'center', width: '70vw', marginInline: 'auto' }}
     >
-      <p style={{ width: '50vw' }} className='title fs-x-large'>
-        {advertData.title}
-      </p>
+      <p
+        style={{ width: '50vw' }}
+        className='title fs-larger'
+        dangerouslySetInnerHTML={{ __html: advertData.title }}
+      ></p>
       <p className='shady-70' style={{ textAlign: 'center' }}>
         {advertData.description}
       </p>
@@ -91,7 +95,10 @@ function BriefAdvert(): JSX.Element {
     </div>
   ) : (
     <div className='col'>
-      <p className='title fs-xx-large'>{advertData.title}</p>
+      <p
+        className='title fs-xx-large'
+        dangerouslySetInnerHTML={{ __html: advertData.title }}
+      ></p>
       <p className='shady-70 centered' style={{ marginTop: 24 }}>
         {advertData.description}
       </p>
@@ -111,7 +118,7 @@ function TrustedPartners(): JSX.Element {
       className='col'
       style={{ width: '80%', marginInline: 'auto', alignItems: 'center' }}
     >
-      <p className='title fs-x-large'>{trustedPartnersData.title}</p>
+      <p className='title fs-larger'>{trustedPartnersData.title}</p>
       <div
         className='inline-fade'
         style={{ width: '68vw', overflow: 'hidden', marginTop: 50 }}
@@ -130,11 +137,11 @@ function TrustedPartners(): JSX.Element {
       </div>
     </div>
   ) : (
-    <div className='col bg2'>
-      <p className='title fs-x-large'>{trustedPartnersData.title}</p>
+    <div className='col'>
+      <p className='title fs-larger'>{trustedPartnersData.title}</p>
       <div
         className='inline-fade'
-        style={{ width: '90vw', overflow: 'hidden' }}
+        style={{ width: '90vw', overflow: 'hidden', marginTop: 50 }}
       >
         <span style={{ zIndex: 'inherit' }}>
           <Marquee>
@@ -153,24 +160,32 @@ function TrustedPartners(): JSX.Element {
 }
 function WhatWeHave(): JSX.Element {
   return isDesktop() ? (
-    <div className='col' style={{ width: '80%' }}>
-      <p className='title fs-larger'>{whatWeHaveData.title}</p>
-      {whatWeHaveData.features.map((feature, index, arr) => {
-        return (
-          <Feature
-            feature={feature}
-            reverse={index % 2 === 1}
-            key={feature.title}
-          />
-        );
-      })}
+    <div className='col'>
+      <p
+        className='title fs-larger'
+        dangerouslySetInnerHTML={{ __html: whatWeHaveData.title }}
+      ></p>
+      <div className='col' style={{ marginTop: 40, rowGap: 10 }}>
+        {whatWeHaveData.features.map((feature, index, arr) => {
+          return (
+            <Feature
+              feature={feature}
+              reverse={index % 2 === 1}
+              key={feature.title}
+            />
+          );
+        })}
+      </div>
     </div>
   ) : (
     <div
       className='col'
       style={{ alignItems: 'center', alignContent: 'center' }}
     >
-      <p className='title fs-x-large'>{whatWeHaveData.title}</p>
+      <p
+        className='title fs-larger'
+        dangerouslySetInnerHTML={{ __html: whatWeHaveData.title }}
+      ></p>
       {whatWeHaveData.features.map((feature, index, arr) => {
         return (
           <Feature
@@ -187,7 +202,7 @@ function WhatWeHave(): JSX.Element {
 function OurProducts(): JSX.Element {
   return isDesktop() ? (
     <div className='col' style={{ width: '80%' }}>
-      <p className='title fs-x-large' style={{ marginBottom: 30 }}>
+      <p className='title fs-larger' style={{ marginBottom: 30 }}>
         {ourProductsData.title}
       </p>
       {ourProductsData.products.map(product => {
@@ -196,7 +211,7 @@ function OurProducts(): JSX.Element {
     </div>
   ) : (
     <div className='col'>
-      <p className='title fs-x-large' style={{ marginBottom: 24 }}>
+      <p className='title fs-large' style={{ marginBottom: 24 }}>
         {ourProductsData.title}
       </p>
       {ourProductsData.products.map(product => {
@@ -209,7 +224,7 @@ function OurProducts(): JSX.Element {
 function Awards(): JSX.Element {
   return isDesktop() ? (
     <div className='col' style={{ width: '61.2vw', alignItems: 'center' }}>
-      <p className='title fs-x-large' style={{}}>
+      <p className='title fs-larger' style={{}}>
         {awardsData.title}
       </p>
       <p className='offwhite centered' style={{}}>
@@ -223,7 +238,7 @@ function Awards(): JSX.Element {
     </div>
   ) : (
     <div>
-      <p className='title fs-x-large'>{awardsData.title}</p>
+      <p className='title fs-larger'>{awardsData.title}</p>
       <p className='offwhite centered'>{awardsData.description}</p>
       <div
         className='grid d2xn'
@@ -259,7 +274,7 @@ function CaseStudies(): JSX.Element {
     </div>
   ) : (
     <div className='col' style={{ alignContent: 'flex-start' }}>
-      <p className='title fs-x-large' style={{ textAlign: 'left' }}>
+      <p className='title fs-larger' style={{ textAlign: 'left' }}>
         {caseStudiesData.title}
       </p>
       <p className='offwhite' style={{ width: '90%' }}>
@@ -275,10 +290,10 @@ function CaseStudies(): JSX.Element {
 function PodcastAdvert(): JSX.Element {
   return isDesktop() ? (
     <div className='col' style={{ width: '80%', alignItems: 'center' }}>
-      <p className='title fs-larger' style={{ width: '80%' }}>
+      <p className='title fs-larger' style={{ width: '95%' }}>
         {podcastAdvertData.title}
       </p>
-      <div className='row' style={{ justifyContent: 'center' }}>
+      <div className='row' style={{ justifyContent: 'center', marginTop: 20 }}>
         {podcastAdvertData.episodes.map(episode => {
           return <PodcastEpisodeTile episode={episode} key={episode.title} />;
         })}
@@ -286,7 +301,7 @@ function PodcastAdvert(): JSX.Element {
     </div>
   ) : (
     <div className='col' style={{ alignItems: 'center' }}>
-      <p className='title fs-x-large' style={{ width: '80%' }}>
+      <p className='title fs-larger' style={{ width: '95%', marginTop: 20 }}>
         {podcastAdvertData.title}
       </p>
       {podcastAdvertData.episodes.map(episode => {
@@ -309,7 +324,7 @@ function BlogsAdvert(): JSX.Element {
     </div>
   ) : (
     <div className='col'>
-      <p className='title fs-x-large' style={{ marginBottom: 48 }}>
+      <p className='title fs-larger' style={{ marginBottom: 48 }}>
         {blogsAdvertData.title}
       </p>
       <div className='col'>
@@ -324,11 +339,11 @@ function Strongholds(): JSX.Element {
   return (
     <div
       className='col'
-      style={{ width: isDesktop() ? '80%' : '100%', alignItems: 'center' }}
+      style={{ width: isDesktop() ? '90%' : '100%', alignItems: 'center' }}
     >
       <p
         className='title fs-larger'
-        style={{ width: isDesktop() ? '80%' : '100%' }}
+        style={{ width: isDesktop() ? '95%' : '100%' }}
       >
         {strongholdsData.title}
       </p>

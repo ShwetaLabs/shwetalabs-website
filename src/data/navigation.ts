@@ -79,7 +79,7 @@ const socialLinks: linkSpec[] = [
   },
   {
     text: 'Medium',
-    url: '',
+    url: 'https://shwetalabs.medium.com/',
     icon: icons.medium,
   },
   {

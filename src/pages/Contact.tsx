@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { contactData } from '../data/contact';
-import { DataService } from '../services/dataService';
+import { MailService } from '../services/dataService';
 import { isDesktop } from '../utils';
 
 export function Contact(): JSX.Element {
@@ -12,29 +12,61 @@ interface IFormSpec {
 }
 function MobileDiv(): JSX.Element {
   return (
-    <div className='col' style={{ alignItems: 'flex-start' }}>
+    <div className='col' style={{ alignItems: 'center' }}>
       <p key={contactData.title} className='title fs-xx-large'>
         {contactData.title}
       </p>
-      <p key={contactData.description}>{contactData.description}</p>
+      <p className='centered' key={contactData.description}>
+        {contactData.description}
+      </p>
       <Form form={contactData.form} />
+      <div
+        className='row'
+        style={{
+          justifyContent: 'center',
+          marginTop: 40,
+          marginBottom: '-4vh',
+        }}
+      >
+        <p
+          className='stripped fs-smaller'
+          dangerouslySetInnerHTML={{ __html: contactData.message }}
+        ></p>
+      </div>
     </div>
   );
 }
 function DesktopDiv(): JSX.Element {
   return (
-    <div
-      className='row'
-      style={{ justifyContent: 'space-evenly', alignItems: 'center' }}
-    >
-      <div className='col' style={{ alignItems: 'flex-start' }}>
-        <p key={contactData.title} className='title fs-xx-large'>
-          {contactData.title}
-        </p>
-        <p key={contactData.description}>{contactData.description}</p>
+    <div className='col'>
+      <div
+        className='row'
+        style={{ justifyContent: 'space-evenly', alignItems: 'center' }}
+      >
+        <div className='col' style={{ alignItems: 'center' }}>
+          <p key={contactData.title} className='title fs-xx-large'>
+            {contactData.title}
+          </p>
+          <p className='centered' key={contactData.description}>
+            {contactData.description}
+          </p>
+        </div>
+        <div className='col' style={{ width: '35%' }}>
+          <Form form={contactData.form} />
+        </div>
       </div>
-      <div className='col' style={{ width: '35%' }}>
-        <Form form={contactData.form} />
+      <div
+        className='row'
+        style={{
+          justifyContent: 'center',
+          marginTop: 40,
+          marginBottom: '-4vh',
+        }}
+      >
+        <p
+          className='stripped fs-smaller'
+          dangerouslySetInnerHTML={{ __html: contactData.message }}
+        ></p>
       </div>
     </div>
   );
@@ -51,7 +83,7 @@ function Form({ form }: IFormSpec): JSX.Element {
     setMessage('');
   };
   const sendData = async () => {
-    const dataService = new DataService();
+    const dataService = new MailService();
     const response = await dataService.postContactUsForm(
       firstName,
       lastName,
@@ -93,9 +125,9 @@ function Form({ form }: IFormSpec): JSX.Element {
         height={167}
       />
       <a
-        className='button2 pointable'
+        className='button2 pointable centered'
         onClick={sendData}
-        style={{ marginTop: '32px' }}
+        style={{ marginTop: '32px', width: '91%' }}
       >
         Submit
       </a>
@@ -129,7 +161,7 @@ function Form({ form }: IFormSpec): JSX.Element {
         height={167}
       />
       <a
-        className='button2 pointable'
+        className='button2 pointable centered'
         onClick={sendData}
         style={{ marginTop: '32px' }}
       >
