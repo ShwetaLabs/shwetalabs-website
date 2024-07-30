@@ -6,9 +6,7 @@ import {
   Product,
   Testimony,
 } from '../components/misc';
-<<<<<<< HEAD
 import { BlogTile } from '../components/blogTile/blogTile';
-=======
 import {
   advertData,
   awardsData,
@@ -20,7 +18,6 @@ import {
   trustedPartnersData,
   whatWeHaveData,
 } from '../data/home';
->>>>>>> hardik
 import { isDesktop } from '../utils';
 
 export const Home: ({}) => JSX.Element = ({}) => {
