@@ -1,9 +1,10 @@
 import { BlogTile } from '../components/blogTile/blogTile';
+import { ComingSoon } from '../components/misc';
 import { blogData } from '../data/blog';
 import { isDesktop } from '../utils';
 
 export function Blog(): JSX.Element {
-  return (
+  return isDesktop() ? (
     <div style={{ paddingLeft: '11vw', paddingRight: '11vw' }}>
       <div
         className='col'
@@ -40,5 +41,22 @@ export function Blog(): JSX.Element {
         </div>
       </div>
     </div>
-  );
+  ) 
+  : (
+    <div style={{ paddingLeft: '1vw', paddingRight: '1vw' }}>
+      <div
+        className='col'
+        style={{ width: '55vw', marginInline: 'auto', alignItems: 'center' }}
+      >
+        <p className='title2 fs-x-large'>{blogData.title}</p>
+        <p
+          className='shady-70 centered'
+          style={{ width: '45vw', marginTop: '2.4vw' }}
+        >
+          {blogData.description}
+        </p>
+      </div>
+	  <ComingSoon />
+    </div>
+  )
 }
