@@ -19,7 +19,10 @@ export default function TitleInfo({ titleInfo }: titleInfoProp): JSX.Element {
       >
         {titleInfo.title}
       </div>
-      <div className='shady-70' style={{ width: '50%', whiteSpace: 'pre-wrap', textAlign: 'left' }}>
+      <div
+        className='shady-70'
+        style={{ width: '50%', whiteSpace: 'pre-wrap', textAlign: 'left' }}
+      >
         {titleInfo.paras}
       </div>
     </div>

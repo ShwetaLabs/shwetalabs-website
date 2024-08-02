@@ -202,7 +202,7 @@ export function SocialLinks() {
           <span style={{ marginRight: '25px' }}>
             <LinkBox
               link={link}
-              aClassName='button fs-large'
+              aClassName='button fs-large svg-color'
               key={link.url}
               target={'_blank'}
             />

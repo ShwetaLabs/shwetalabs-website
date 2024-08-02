@@ -26,7 +26,7 @@ export default function ValueCard({ valueCard, onLeft }: valueCardProp) {
           }}
         >
           <img
-            style={{ objectFit: 'scale-down', width: '100%' }}
+            style={{ objectFit: 'scale-down', width: '90%' }}
             src={valueCard.image}
             alt={valueCard.title}
           />
@@ -57,15 +57,28 @@ export default function ValueCard({ valueCard, onLeft }: valueCardProp) {
     >
       <div>
         <img
-          style={{ objectFit: 'cover' }}
+          style={{
+            margin: 'auto',
+            display: 'block',
+            objectFit: 'cover',
+            width: '80%',
+          }}
           src={valueCard.image}
           alt={valueCard.title}
         />
       </div>
-      <p style={{ marginBlock: 10 }} className='fs-larger stripped'>
+      <p style={{ marginBlock: 10 }} className='fs-some-large fw-bold stripped'>
         {valueCard.title}
       </p>
-      <p className='fs-small' style={{ lineHeight:"1.4", whiteSpace:'pre-line', textAlign: 'center', opacity: '0.6' }}>
+      <p
+        className='fs-small'
+        style={{
+          lineHeight: '1.4',
+          whiteSpace: 'pre-line',
+          textAlign: 'center',
+          opacity: '0.6',
+        }}
+      >
         {valueCard.para}
       </p>
     </div>

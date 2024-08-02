@@ -33,14 +33,13 @@ export const Header: (props: IHeaderProps) => JSX.Element = ({
         backgroundColor: 'black',
       }}
     >
-      <Link to={headerData.logoLink.url}>
+      <Link className='svg-color' to={headerData.logoLink.url}>
         <img src={headerData.logo} />
       </Link>
       <div
         className='row'
         style={{
-          columnGap: '1.8vw',
-
+          columnGap: '1.6vw',
           alignItems: 'center',
         }}
       >
@@ -131,9 +130,10 @@ export function HeaderButtonDesktop({
     <div
       style={{
         textTransform: 'uppercase',
+        fontSize: '0.7rem',
       }}
     >
-      <LinkBox link={link} aClassName='headerButton fs-small hoverUnderline' />
+      <LinkBox link={link} aClassName='headerButton hoverUnderline' />
     </div>
   );
 }

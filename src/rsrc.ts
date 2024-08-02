@@ -81,6 +81,9 @@ import cin from './assets/footer/cin.svg';
 import phone from './assets/footer/phone.svg';
 import location from './assets/footer/location.svg';
 import mail from './assets/footer/mail.svg';
+
+import searchIcon from './assets/search.svg';
+
 export const images = {
   logo,
   // logo192,
@@ -144,6 +147,8 @@ export const images = {
   aws,
   iitkgp,
   nvidia,
+
+  searchIcon,
 };
 
 export const icons = {

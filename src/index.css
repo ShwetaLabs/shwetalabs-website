@@ -24,6 +24,10 @@
   /*semi-bold for figma. 600 wasn't looking right.*/
 }
 
+.fw-semibold {
+  font-weight: 500;
+}
+
 .fw-bold {
   font-weight: 550;
 }
@@ -55,6 +59,10 @@
   /*figma: 20*/
   .fs-large {
     font-size: 1.5rem;
+  }
+
+  .fs-some-large {
+    font-size: 1.55rem;
   }
 
   .fs-larger {
@@ -96,6 +104,10 @@
   /*figma: 20*/
   .fs-large {
     font-size: 1.6rem;
+  }
+
+  .fs-some-large {
+    font-size: 2.9rem;
   }
 
   /*figma: 32*/
@@ -165,7 +177,6 @@ a.headerButton {
   padding-block: 0.76vw;
   padding-inline: 1.2vw;
   letter-spacing: 0.1em;
-
 }
 a.hoverColor:hover {
   color: var(--primary-light);
@@ -179,6 +190,11 @@ a.button {
   color: white;
   border-radius: 5px;
   letter-spacing: 50%;
+}
+
+.svg-color:hover {
+  filter: invert(49%) sepia(98%) saturate(220%) hue-rotate(141deg)
+    brightness(88%) contrast(97%);
 }
 
 div.inline-fade {
@@ -210,6 +226,10 @@ div.inline-fade::before {
 }
 
 p.shady-70 {
+  opacity: 70%;
+}
+
+.shady-70 {
   opacity: 70%;
 }
 
@@ -398,6 +418,7 @@ a.button-pill {
   border-radius: 30px;
   background-color: var(--tertiary-bg);
   padding: 8px;
+  margin-bottom: 32px;
   padding-inline: 16px;
   text-transform: uppercase;
 }
@@ -408,9 +429,17 @@ a.button-pill {
   display: inline-block;
   vertical-align: middle;
   right: 0px;
+  top: 4px;
   margin: 0px;
   padding-right: 8px;
   align-self: center;
+}
+
+.ellipsised {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 a.caret-right::after {

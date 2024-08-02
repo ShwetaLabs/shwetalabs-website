@@ -55,11 +55,14 @@ function BriefAdvert(): JSX.Element {
       style={{ alignItems: 'center', width: '70vw', marginInline: 'auto' }}
     >
       <p
-        style={{ width: '50vw' }}
+        style={{ width: '50vw', marginBottom: '20px' }}
         className='title fs-larger'
         dangerouslySetInnerHTML={{ __html: advertData.title }}
       ></p>
-      <p className='shady-70' style={{ textAlign: 'center' }}>
+      <p
+        className='shady-70'
+        style={{ textAlign: 'center', margin: 'auto 50px' }}
+      >
         {advertData.description}
       </p>
       {/* <span style={{ marginTop: 40, textTransform: 'uppercase' }}>
@@ -78,10 +81,7 @@ function BriefAdvert(): JSX.Element {
         }}
       >
         <div>
-          <p
-            className='shady-70'
-            style={{ width: '35vw'}}
-          >
+          <p className='shady-70' style={{ width: '35vw' }}>
             {advertData.descriptionBesideLogo}
           </p>
         </div>
@@ -313,7 +313,7 @@ function BlogsAdvert(): JSX.Element {
       <p className='title fs-larger' style={{ marginBottom: 48 }}>
         {blogsAdvertData.title}
       </p>
-      <div className='row'>
+      <div className='row' style={{ gap: '2%' }}>
         {blogsAdvertData.blogs.map(blog => {
           return <BlogTile blog={blog} showPreview={false} key={blog.title} />;
         })}

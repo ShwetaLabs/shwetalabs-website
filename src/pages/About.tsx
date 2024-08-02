@@ -50,7 +50,7 @@ export function About(): JSX.Element {
       }}
     >
       <TitleInfo titleInfo={aboutData.titleInfo} />
-      <div style={{}}>{createRows(aboutData.visions)}</div>
+      <div>{createRows(aboutData.visions)}</div>
       <Values values={aboutData.values} />
       {/*<Squad squad={aboutData.squad} /> */}
     </div>
@@ -63,24 +63,51 @@ export function About(): JSX.Element {
       }}
     >
       <TitleInfo titleInfo={aboutData.titleInfo} />
-      <div style={{}}>
+      <div>
         {aboutData.visions.map(visionCard => {
           return (
             <div
               className='col bg-accent'
-              style={{ alignItems: 'center', marginTop: 24 }}
+              style={{ alignItems: 'center', marginTop: '20px' }}
             >
-              <div>
+              <div style={{ margin: '20px' }}>
                 <img src={visionCard.image} />
               </div>
-              <p className='fs-larger fw-bold'>{visionCard.title}</p>
-              <p className='shady-70 centered'>{visionCard.para}</p>
+              <div className='fs-larger fw-semibold'>{visionCard.title}</div>
+              <div style={{ margin: '20px' }} className='shady-70 centered'>
+                {visionCard.para}
+              </div>
             </div>
           );
         })}
       </div>
-      <Values values={aboutData.values} />
-      {/*<Squad squad={aboutData.squad} /> */}
+
+      <div>
+        <div style={{ marginBottom: '50px' }}>
+          <p className='fs-x-large title' style={{ textAlign: 'center' }}>
+            {aboutData.values.title}
+          </p>
+        </div>
+
+        <div>
+          {aboutData.values.cards.map(visionCard => {
+            return (
+              <div
+                className='col bg-accent'
+                style={{ alignItems: 'center', marginTop: '20px' }}
+              >
+                <div style={{ margin: '20px' }}>
+                  <img src={visionCard.image} />
+                </div>
+                <div className='fs-large fw-semibold'>{visionCard.title}</div>
+                <div style={{ margin: '20px' }} className='shady-70 centered'>
+                  {visionCard.para}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 }

@@ -63,7 +63,7 @@ Founder, Naveen A. witnessed first-hand the hurdles law enforcement faced in his
       {
         image: images.intelligentLogo,
         title: 'Intelligent',
-        para: 'We are a company that believes in Character and Competence. Our character comes from adhering to our mission and values. While our competence is based on intelligence, imagination and innovation',
+        para: 'We are a company that believes in Character and Competence. Our character comes from adhering to our mission and values. While our competence is based on intelligence, imagination and innovation.',
       },
       {
         image: images.proactiveLogo,

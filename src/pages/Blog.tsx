@@ -2,6 +2,7 @@ import { BlogTile } from '../components/blogTile/blogTile';
 import { ComingSoon } from '../components/misc';
 import { blogData } from '../data/blog';
 import { isDesktop } from '../utils';
+import { BlogSearch } from '../components/blogSearch/blogSearch';
 
 export function Blog(): JSX.Element {
   return isDesktop() ? (
@@ -19,30 +20,30 @@ export function Blog(): JSX.Element {
         </p>
       </div>
 
-      <div style={{ display: 'flex' }}>
-        <div style={{ width: '65%' }}>
+      <div className='row' style={{ gap: '1%' }}>
+        <div style={{ width: '65%', height: '100%' }}>
           <BlogTile blog={blogData.featured} showPreview={true} shaded={true} />
         </div>
 
         <div
+          className='col'
           style={{
             width: '35%',
-            display: 'flex',
-            flexDirection: 'column',
-            rowGap: '20px',
+            rowGap: '2vw',
           }}
         >
-          <div style={{ height: '50%' }}>
+          <div style={{ height: '40%' }}>
             <BlogTile blog={blogData.onTop[0]} showPreview={false} />
           </div>
-          <div style={{ height: '50%' }}>
+          <div style={{ height: '40%' }}>
             <BlogTile blog={blogData.onTop[1]} showPreview={false} />
           </div>
         </div>
       </div>
+
+      <BlogSearch blogSearch={blogData.blogSearch} />
     </div>
-  ) 
-  : (
+  ) : (
     <div style={{ paddingLeft: '1vw', paddingRight: '1vw' }}>
       <div
         className='col'
@@ -56,7 +57,7 @@ export function Blog(): JSX.Element {
           {blogData.description}
         </p>
       </div>
-	  <ComingSoon />
+      <ComingSoon />
     </div>
-  )
+  );
 }

@@ -14,29 +14,40 @@ export function BlogTile({
   shaded,
 }: IBlogProps): JSX.Element {
   return isDesktop() ? (
-    <div className={shaded ? 'col bg2' : 'col'} style={{ marginInline: 16 }}>
-      <div className='blogtile'>
-        <img src={blog.image} />
+    <div className={shaded ? 'col bg2' : 'col'} style={{ height: '100%' }}>
+      <div className='blogtile' style={{ height: '56%' }}>
+        <img
+          style={{ objectFit: 'cover', overflow: 'hidden', width: '100%' }}
+          src={blog.image}
+        />
       </div>
-      <div style={shaded ? { margin: 24 } : {}}>
+      <div
+        style={shaded ? { margin: '0px 24px 10px 24px' } : { height: '44%' }}
+      >
         <div
           className='row'
-          style={{ justifyContent: 'space-between', marginTop: 24 }}
+          style={{ justifyContent: 'space-between', marginTop: '4%' }}
         >
           <p className='offwhite fs-smaller stripped'>{blog.date}</p>
           <p className='offwhite fs-smaller stripped clocked'>{blog.length}</p>
         </div>
         <div className='col' style={{ alignItems: 'flex-start' }}>
-          <p className='stripped' style={{ marginBottom: 12 }}>
+          <p
+            className='stripped ellipsised'
+            style={{ WebkitLineClamp: '2', marginBottom: 12 }}
+          >
             {blog.title}
           </p>
           {showPreview ? (
             <p
-              className='shady-70 fs-smaller stripped'
-              style={{ marginBottom: 12 }}
+              className='shady-70 fs-smaller stripped ellipsised'
+              style={{
+                lineHeight: '1.4',
+                WebkitLineClamp: '4',
+                marginBottom: 12,
+              }}
             >
-              {' '}
-              {blog.data}{' '}
+              {blog.data}
             </p>
           ) : null}
           <LinkBox
