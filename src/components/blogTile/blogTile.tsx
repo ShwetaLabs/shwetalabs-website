@@ -1,4 +1,4 @@
-import { isDesktop } from '../../utils';
+import { isDesktop, stripHTML } from '../../utils';
 import { blogSpec } from '../../data/home';
 import { LinkBox } from '../linkBox/LinkBox';
 import { useEffect, useState } from 'react';
@@ -56,9 +56,10 @@ export function BlogTile({
                                 lineHeight: '1.4',
                                 WebkitLineClamp: '4',
                                 marginBottom: 12,
+								whiteSpace: 'pre-wrap'
                             }}
                         >
-						<div dangerouslySetInnerHTML={{__html: blogData}} />
+						{stripHTML(blogData)}
                         </p>
                     ) : null}
                     <LinkBox
