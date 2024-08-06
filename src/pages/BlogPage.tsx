@@ -16,7 +16,7 @@ export function BlogPage() {
     )
     if (blogContent == null) return <div />
     return <div style={{ padding: "0px 10%" }}>
-        <div style={{ padding: "0px 17%" }}>
+        <div style={{ padding: "0px 17%", marginBottom:'30px' }}>
             <div
                 className='row'
                 style={{ justifyContent: 'space-between' }}
@@ -26,7 +26,7 @@ export function BlogPage() {
             </div>
             <div className='fw-bold fs-x-large' style={{ lineHeight: "100%" }}> {blog.title} </div>
         </div>
-        <div>
+        <div style={{marginBottom:"30px"}}>
             <img src={blog.image} style={{ objectFit: "contain", width: "100%" }} />
         </div>
         <div className="color-dont-change" style={{ padding: "0px 17%"}}>
