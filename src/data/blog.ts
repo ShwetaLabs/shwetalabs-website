@@ -1,4 +1,4 @@
-import { blogImages } from '../rsrc';
+import { BlogContents, blogImages } from '../rsrc';
 import { blogSpec } from './home';
 
 interface blogPageSpec {
@@ -25,7 +25,7 @@ export const blogData: blogPageSpec = {
       'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
     buttonText: 'Read Full Article',
     data: 'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Placeat quisquam ipsum minus accusantium inventore quis consectetur rem. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
-    url: '/contact',
+	url: '/contact'
   },
   onTop: [
     {
@@ -68,7 +68,7 @@ export const blogData: blogPageSpec = {
         title:
           'sanchit Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
         buttonText: 'Read Full Article',
-        data: 'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Placeat quisquam ipsum minus accusantium inventore quis consectetur rem. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
+        data: BlogContents.blogContent1,
         url: '/contact',
         categories: ['Latest Post', 'Category 3'],
       },

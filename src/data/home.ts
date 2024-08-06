@@ -121,7 +121,7 @@ export interface blogSpec {
   title: string;
   data: string;
   buttonText: string;
-  url: string;
+  url?: string;
   categories?: string[];
 }
 export const blogsAdvertData = {

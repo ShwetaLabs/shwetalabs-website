@@ -1,5 +1,6 @@
 import { About } from '../pages/About';
 import { Blog } from '../pages/Blog';
+import { BlogPage } from '../pages/BlogPage';
 import { Contact } from '../pages/Contact';
 import { Home } from '../pages/Home';
 import { Cookies } from '../pages/legal/Cookies';
@@ -42,6 +43,11 @@ export const blogLink = {
   url: '/blog',
   element: Blog,
 };
+export const blogPageLink = {
+	text: 'BlogPage',
+	url: '/blog/:blogId?',
+	element: BlogPage,
+} 
 export const podcastLink = {
   text: 'Podcast',
   url: '/podcast',
@@ -56,6 +62,7 @@ export const policyLink = {
   text: 'Policy',
   url: '/',
 };
+
 /**@private*/
 const staticHeaderLinks: linkSpec[] = [
   aboutLink,
@@ -63,6 +70,7 @@ const staticHeaderLinks: linkSpec[] = [
   servicesLink,
   podcastLink,
   blogLink,
+  blogPageLink,
   contactLink,
 ];
 const socialLinks: linkSpec[] = [

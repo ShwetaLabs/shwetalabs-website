@@ -159,10 +159,10 @@ export function BlogSearch({ blogSearch }: blogSearchProp) {
             rowGap: '2%',
           }}
         >
-          {shownBlogs.map(blog => {
+          {shownBlogs.map((blog, id) => {
             return (
               <div>
-                <BlogTile blog={blog} showPreview={true} shaded={false} />
+                <BlogTile blog={blog} url={`/blog/${id}`} showPreview={true} shaded={false} />
               </div>
             );
           })}

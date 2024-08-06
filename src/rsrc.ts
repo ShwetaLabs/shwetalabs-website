@@ -179,3 +179,9 @@ export const blogImages = {
   blog3,
   featuredBlog,
 };
+
+import blogContent1 from './assets/blogData/SLWebBlog001.txt'
+
+export const BlogContents  = {
+	blogContent1,
+}

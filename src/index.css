@@ -563,3 +563,7 @@ div.d2xn {
 .field.input:focus-visible {
   outline: none;
 }
+
+.color-dont-change * {
+	color: inherit !important
+}
