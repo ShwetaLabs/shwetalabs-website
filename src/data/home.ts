@@ -1,4 +1,4 @@
-import { blogImages, images, people } from '../rsrc';
+import { BlogContents, blogImages, images, people } from '../rsrc';
 import { contactLink } from './navigation';
 
 export const advertData = {
@@ -136,8 +136,8 @@ export const blogsAdvertData = {
       title:
         'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. ',
       buttonText: 'Read Article',
-      data: '',
-      url: '/contact',
+      data: BlogContents.blogContent1,
+      url: '/blog/0',
     },
     {
       // can also be urls of images online.
@@ -147,8 +147,8 @@ export const blogsAdvertData = {
       title:
         'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. ',
       buttonText: 'Read Article',
-      data: '',
-      url: '/contact',
+      data: BlogContents.blogContent1,
+      url: '/blog/1',
     },
     {
       // can also be urls of images online.
@@ -158,8 +158,8 @@ export const blogsAdvertData = {
       title:
         'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. ',
       buttonText: 'Read Article',
-      data: '',
-      url: '/contact',
+      data: BlogContents.blogContent1,
+      url: '/blog/2',
     },
   ],
 };

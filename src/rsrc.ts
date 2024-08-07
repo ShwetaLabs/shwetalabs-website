@@ -180,8 +180,8 @@ export const blogImages = {
   featuredBlog,
 };
 
-import blogContent1 from './assets/blogData/SLWebBlog001.txt'
+import blogContent1 from './assets/blogData/SL Web Blog 001.txt';
 
-export const BlogContents  = {
-	blogContent1,
-}
+export const BlogContents = {
+  blogContent1,
+};

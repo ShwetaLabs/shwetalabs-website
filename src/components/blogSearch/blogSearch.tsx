@@ -4,8 +4,9 @@ import Tabs, { tabsClasses } from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import { blogSearchSpec } from '../../data/blog';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Fuse from 'fuse.js';
+import { parseHTML } from '../../utils';
 
 interface blogSearchProp {
   blogSearch: blogSearchSpec;
@@ -19,55 +20,21 @@ export function BlogSearch({ blogSearch }: blogSearchProp) {
   let categoryToBlogs: { [category: string]: blogSpec[] } = {};
   let fuse = new Fuse(blogSearch.blogs, { keys: ['title'] });
 
+  // useEffect(() => {
   blogSearch.tabs.map(cat => (categoryToBlogs[cat] = []));
   blogSearch.blogs.map(blog => {
+    fetch(blog.data)
+      .then(res => res.text())
+      .then(data => {
+        let temp;
+        [blog.title, temp] = parseHTML(data);
+      });
     blog.categories!.map(cat => {
       categoryToBlogs[cat].push(blog);
     });
   });
+  // }, [blogSearch])
 
-  function createRows(blogs: blogSpec[]) {
-    var rows: JSX.Element[] = [];
-    var inRow: JSX.Element[] = [];
-    for (var i = 0; i < blogs.length; i++) {
-      inRow.push(
-        <div style={{ width: '33%' }}>
-          <BlogTile blog={blogs[i]} showPreview={true} shaded={false} />
-        </div>,
-      );
-      if (inRow.length === 3) {
-        rows.push(
-          <div
-            style={{
-              height: '100%',
-              display: 'grid',
-              justifyContent: 'space-between',
-              gap: '30px',
-              marginBottom: '5%',
-            }}
-          >
-            {inRow.concat()}
-          </div>,
-        );
-        inRow = [];
-      }
-    }
-    if (inRow.length > 0) {
-      rows.push(
-        <div
-          style={{
-            height: '100%',
-            display: 'grid',
-            justifyContent: 'space-between',
-            gap: '30px',
-          }}
-        >
-          {inRow.concat()}
-        </div>,
-      );
-    }
-    return rows;
-  }
   return (
     <div style={{ columnGap: '2vw' }}>
       <div className='row' style={{ marginBottom: '50px' }}>
@@ -76,6 +43,9 @@ export function BlogSearch({ blogSearch }: blogSearchProp) {
             textColor='inherit'
             value={chosenTab}
             onChange={(event: any, newValue: number) => {
+              console.log(newValue);
+              console.log(categoryToBlogs);
+              console.log(categoryToBlogs[blogSearch.tabs[newValue]]);
               setChosenTab(newValue);
               setShownBlogs(categoryToBlogs[blogSearch.tabs[newValue]]);
             }}
@@ -154,7 +124,7 @@ export function BlogSearch({ blogSearch }: blogSearchProp) {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'auto auto auto',
+            gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
             columnGap: '2%',
             rowGap: '2%',
           }}
@@ -162,7 +132,12 @@ export function BlogSearch({ blogSearch }: blogSearchProp) {
           {shownBlogs.map((blog, id) => {
             return (
               <div>
-                <BlogTile blog={blog} url={`/blog/${id}`} showPreview={true} shaded={false} />
+                <BlogTile
+                  blog={blog}
+                  url={`/blog/${id}`}
+                  showPreview={true}
+                  shaded={false}
+                />
               </div>
             );
           })}

@@ -22,10 +22,10 @@ export const blogData: blogPageSpec = {
     date: '12 March, 2024',
     length: '3 min',
     title:
-      'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
+      'sanchit Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
     buttonText: 'Read Full Article',
-    data: 'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Placeat quisquam ipsum minus accusantium inventore quis consectetur rem. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
-	url: '/contact'
+    data: BlogContents.blogContent1,
+    url: '/blog/featured',
   },
   onTop: [
     {
@@ -33,20 +33,20 @@ export const blogData: blogPageSpec = {
       date: '12 March, 2024',
       length: '3 min',
       title:
-        'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
+        'sanchit Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
       buttonText: 'Read Full Article',
-      data: '',
-      url: '/contact',
+      data: BlogContents.blogContent1,
+      url: '/blog/top1',
     },
     {
       image: blogImages.blog1,
       date: '12 March, 2024',
       length: '3 min',
       title:
-        'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
+        'sanchit Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
       buttonText: 'Read Full Article',
-      data: '',
-      url: '/contact',
+      data: BlogContents.blogContent1,
+      url: '/blog/top2',
     },
   ],
 
@@ -69,7 +69,6 @@ export const blogData: blogPageSpec = {
           'sanchit Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
         buttonText: 'Read Full Article',
         data: BlogContents.blogContent1,
-        url: '/contact',
         categories: ['Latest Post', 'Category 3'],
       },
       {
@@ -77,10 +76,9 @@ export const blogData: blogPageSpec = {
         date: '12 March, 2024',
         length: '3 min',
         title:
-          'hardik Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
+          'naveen Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
         buttonText: 'Read Full Article',
-        data: 'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Placeat quisquam ipsum minus accusantium inventore quis consectetur rem. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
-        url: '/contact',
+        data: BlogContents.blogContent1,
         categories: ['Latest Post', 'Category 2'],
       },
       {
@@ -88,10 +86,9 @@ export const blogData: blogPageSpec = {
         date: '12 March, 2024',
         length: '3 min',
         title:
-          'naveen Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
+          'sanchit Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
         buttonText: 'Read Full Article',
-        data: 'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Placeat quisquam ipsum minus accusantium inventore quis consectetur rem. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
-        url: '/contact',
+        data: BlogContents.blogContent1,
         categories: ['Latest Post', 'Category 1'],
       },
       {
@@ -99,10 +96,9 @@ export const blogData: blogPageSpec = {
         date: '12 March, 2024',
         length: '3 min',
         title:
-          'hello Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
+          'sanchit Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
         buttonText: 'Read Full Article',
-        data: 'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Placeat quisquam ipsum minus accusantium inventore quis consectetur rem. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
-        url: '/contact',
+        data: BlogContents.blogContent1,
         categories: ['Latest Post', 'Category 6'],
       },
       {
@@ -112,8 +108,7 @@ export const blogData: blogPageSpec = {
         title:
           'sanchit Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
         buttonText: 'Read Full Article',
-        data: 'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Placeat quisquam ipsum minus accusantium inventore quis consectetur rem. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
-        url: '/contact',
+        data: BlogContents.blogContent1,
         categories: ['Latest Post', 'Category 5'],
       },
       {
@@ -121,10 +116,9 @@ export const blogData: blogPageSpec = {
         date: '12 March, 2024',
         length: '3 min',
         title:
-          'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
+          'sanchit Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
         buttonText: 'Read Full Article',
-        data: 'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Placeat quisquam ipsum minus accusantium inventore quis consectetur rem. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
-        url: '/contact',
+        data: BlogContents.blogContent1,
         categories: ['Latest Post', 'Category 4'],
       },
       {
@@ -132,10 +126,9 @@ export const blogData: blogPageSpec = {
         date: '12 March, 2024',
         length: '3 min',
         title:
-          'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
+          'sanchit Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
         buttonText: 'Read Full Article',
-        data: 'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Placeat quisquam ipsum minus accusantium inventore quis consectetur rem. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
-        url: '/contact',
+        data: BlogContents.blogContent1,
         categories: ['Latest Post', 'Category 3'],
       },
       {
@@ -143,10 +136,9 @@ export const blogData: blogPageSpec = {
         date: '12 March, 2024',
         length: '3 min',
         title:
-          'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
+          'sanchit Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
         buttonText: 'Read Full Article',
-        data: 'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Placeat quisquam ipsum minus accusantium inventore quis consectetur rem. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
-        url: '/contact',
+        data: BlogContents.blogContent1,
         categories: ['Latest Post', 'Category 2'],
       },
       {
@@ -154,21 +146,19 @@ export const blogData: blogPageSpec = {
         date: '12 March, 2024',
         length: '3 min',
         title:
-          'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
+          'sanchit Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
         buttonText: 'Read Full Article',
-        data: 'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Placeat quisquam ipsum minus accusantium inventore quis consectetur rem. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
-        url: '/contact',
+        data: BlogContents.blogContent1,
         categories: ['Latest Post', 'Category 1'],
       },
       {
-        image: blogImages.blog3,
+        image: blogImages.blog1,
         date: '12 March, 2024',
         length: '3 min',
         title:
-          'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
+          'sanchit Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
         buttonText: 'Read Full Article',
-        data: 'Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Placeat quisquam ipsum minus accusantium inventore quis consectetur rem. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure. Alias et commodi repellat. Nostrum autem ut molestias accusamus iure.',
-        url: '/contact',
+        data: BlogContents.blogContent1,
         categories: ['Latest Post', 'Category 1'],
       },
     ],

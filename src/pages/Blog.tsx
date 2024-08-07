@@ -21,8 +21,15 @@ export function Blog(): JSX.Element {
       </div>
 
       <div className='row' style={{ gap: '1%' }}>
-        <div style={{ width: '65%', height: '100%' }}>
-          <BlogTile blog={blogData.featured} url={blogData.featured.url} showPreview={true} shaded={true} />
+        <div className='col' style={{ width: '65%', height: '100%' }}>
+          <div>
+            <BlogTile
+              blog={blogData.featured}
+              url={blogData.featured.url}
+              showPreview={true}
+              shaded={true}
+            />
+          </div>
         </div>
 
         <div
@@ -32,11 +39,21 @@ export function Blog(): JSX.Element {
             rowGap: '2vw',
           }}
         >
-          <div style={{ height: '40%' }}>
-            <BlogTile blog={blogData.onTop[0]} url={blogData.onTop[0].url} showPreview={false} />
-          </div>
-          <div style={{ height: '40%' }}>
-            <BlogTile blog={blogData.onTop[1]} url={blogData.onTop[1].url} showPreview={false} />
+          <div style={{ flexBasis: '0px', flexGrow: '1', overflow: 'hidden' }}>
+            <div style={{ height: '50%' }}>
+              <BlogTile
+                blog={blogData.onTop[0]}
+                url={blogData.onTop[0].url}
+                showPreview={false}
+              />
+            </div>
+            <div style={{ height: '50%' }}>
+              <BlogTile
+                blog={blogData.onTop[1]}
+                url={blogData.onTop[1].url}
+                showPreview={false}
+              />
+            </div>
           </div>
         </div>
       </div>

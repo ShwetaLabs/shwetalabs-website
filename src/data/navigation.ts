@@ -44,10 +44,10 @@ export const blogLink = {
   element: Blog,
 };
 export const blogPageLink = {
-	text: 'BlogPage',
-	url: '/blog/:blogId?',
-	element: BlogPage,
-} 
+  text: 'BlogPage',
+  url: '/blog/:blogId?',
+  element: BlogPage,
+};
 export const podcastLink = {
   text: 'Podcast',
   url: '/podcast',
